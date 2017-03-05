@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<form [formGroup]="myForm">
+	 	<ion-item>
+            <ion-label>Estado Civil</ion-label>
+            <ion-select formControlName="select" (ionCancel)="selectValid()" (ionChange)="selectValid()" >
+	            <ion-option value="Casado">Casado</ion-option>
+	            <ion-option value="Soltero">Soltero</ion-option>
+	            <ion-option value="Viudo">Viudo</ion-option>
+            </ion-select>
+		</ion-item>
+		<p [hidden]="prueba" color="danger" >Elige tu estado civil!</p>
+	</form>
+</ion-content>
